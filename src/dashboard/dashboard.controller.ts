@@ -32,7 +32,7 @@ export class DashboardController {
 
 
             return {
-                pageClasses: `bg-default g-sidenav-show g-sidenav-pinned`,
+                pageClasses: `dashboard bg-default g-sidenav-show g-sidenav-pinned`,
                 title: `Dashboard Unicred`,
                 user: refreshToken.User,
                 panel: true,

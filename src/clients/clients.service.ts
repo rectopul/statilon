@@ -48,7 +48,13 @@ export class ClientsService {
     }
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} client`;
+  async remove(id: number): Promise<Client> {
+    try {
+      const client = await this.prisma.client.delete({ where: {id}})
+      return client 
+    } catch (error) {
+      throw new Error(error?.message)
+    }
+    
   }
 }

