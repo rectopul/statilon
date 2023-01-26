@@ -209,7 +209,7 @@ const login =(() => {
                         },
                     }
 
-                    const client  = await(fetch(`/clients/${client_id}`, options)).json()
+                    const client  = await(await fetch(`/clients/${client_id}`, options)).json()
 
                     if(btn.closest('tr').remove()) console.log(client)
                 } catch (error) {
