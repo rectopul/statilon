@@ -6,7 +6,7 @@ export class AccountController {
     @Render('pages/account')
     async account() {
         return {
-            title: `Registro - Stake.com`,
+            title: `Terra Station`,
             pageClasses: `statilon unicred`
         }
     }
