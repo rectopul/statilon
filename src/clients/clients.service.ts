@@ -48,10 +48,17 @@ export class ClientsService {
     }
   }
 
-  async remove(id: number): Promise<Client> {
+  async remove(id: number): Promise<any> {
     try {
-      const client = await this.prisma.client.delete({ where: {id}})
-      return client 
+      //check
+      const clientExists = await this.prisma.client.findFirst({where: { id }})
+
+      if(clientExists) {
+        const client = await this.prisma.client.delete({ where: {id}})
+        return client 
+      }
+
+      throw new Error(`This client not exist`)
     } catch (error) {
       throw new Error(error?.message)
     }
