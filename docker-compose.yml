@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  postgres-statlons:
+    image: "postgres:latest"
+    container_name: postgres-statlons
+    restart: always
+    
+    volumes:
+      - ./data-postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: b4f7d02b4a5dcc14672e73d7e5ddd4c3
+      POSTGRES_USER: postgres
+      POSTGRES_DB: statlons
+      PGUSER: postgres
+    ports:
+      - 5432:5432
+    expose:
+      - 5433
+    healthcheck:
+        test: ["CMD-SHELL", "pg_isready"]
+        interval: 10s
+        timeout: 5s
+        retries: 5
+    mem_limit: 512m
+

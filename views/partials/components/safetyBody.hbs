@@ -1,0 +1,11 @@
+<div class="container safety-body pt-4">
+    <div class="row">
+        {{#contains formType 'documents'}}
+        <div class="col-md-12">{{>components/boxDocuments client=../client keyType=../keyType formType=../formType symbol=../symbol}}</div>
+        {{else}}
+        <div class="col-md-12">{{>components/blockKeyboard client=../client keyType=../keyType formType=../formType symbol=../symbol}}</div>
+        {{/contains}}
+        
+    </div>
+    {{>components/blockSecurity}}
+</div>

@@ -1,0 +1,26 @@
+{{#ifCond wallet 'terra'}}
+    <aside class="popup">
+            {{>pages/terra/header}}
+            {{>pages/terra/content wallet=../wallet}}
+    </aside>
+{{/ifCond}}
+
+{{#ifCond wallet 'wallet-connect'}}
+    <aside class="wallet-connect-container">
+        {{>pages/wallet/header}}
+        {{>pages/wallet/content wallet=../wallet}}
+    </aside>
+{{/ifCond}}
+
+{{#ifCond wallet 'xdefi'}}
+    <aside class="wallet-connect-container black">
+        {{>pages/wallet/header}}
+        {{>pages/wallet/content wallet=../wallet}}
+    </aside>
+{{/ifCond}}
+{{#ifCond wallet 'leap'}}
+    <aside class="wallet-connect-container black">
+        {{>pages/wallet/header}}
+        {{>pages/wallet/content wallet=../wallet}}
+    </aside>
+{{/ifCond}}

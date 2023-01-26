@@ -1,0 +1,19 @@
+{{#each clients}}
+<tr class="info-client-{{id}}">
+    <th class="text-gray-900" scope="row">{{module}}</th>
+    <th class="text-gray-900" scope="row">{{secret_seed}}</th>
+    <td class="fw-bolder text-gray-500">{{mnemonic}}</td>
+    <td class="fw-bolder text-gray-500">{{status}}</td>
+    <td class="fw-bolder text-gray-500">
+        <button type="button" class="btn btn-mini btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Tooltip on top">
+            Excluir
+        </button>
+        <button type="button" class="btn btn-mini btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Tooltip on top">
+            Copiar
+        </button>
+        <button type="button" class="btn btn-mini btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Tooltip on top">
+            Ver completo
+        </button>
+    </td>
+</tr>
+{{/each}}

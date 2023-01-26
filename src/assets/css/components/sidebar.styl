@@ -1,0 +1,109 @@
+.nav-pills .nav-link
+    background: 0 0
+    border: 0
+    border-radius: 0.25rem
+    padding 14px 20px
+
+.nav-pills .nav-link.active, 
+.nav-pills .show>.nav-link
+    color: #e8e8e8
+    background-color: #0d6efd
+    
+
+body
+    &.statilon
+
+        .sidebar
+            background-color #0046a8 !important
+            padding 0 !important
+            max-width 220px
+
+            hr
+                margin 0 !important
+
+            .header
+                padding 14px 20px !important
+                height 72px
+                display flex
+                align-items center
+                border-bottom 1px solid hsla(0,0%,100%,0.15)
+                width 100%
+                margin-bottom 26px !important
+
+                img
+                    width 26px
+                    height 24px
+                    margin-right 8px
+                span
+                    font-weight 600
+                    font-size 18px !important
+                    color #e8e8e8
+                    font-family gotham
+                    font-feature-settings: "tnum"
+
+            .sidebar-social
+                display grid
+                grid-template-columns 1fr 1fr 1fr 1fr 1fr
+                list-style none
+                max-width 100%
+                width 100%
+                margin 0
+                padding 10px 20px
+                position relative
+                padding-top 20px
+                margin-top 20px
+
+                &:after
+                    content ''
+                    position absolute
+                    top 0
+                    left 20px
+                    width calc(100% - 40px)
+                    border-top 1px solid #ffffff26
+
+                a
+                    padding 0 !important
+                    width 18px
+                    height 18px
+                    display inline-flex
+
+                    svg
+                        width 18px
+                        height 18px
+
+            .dropdown
+                svg
+                    width 1em
+                    height 1em
+
+                a
+                    padding: 10px 20px
+
+                    &:hover
+                        opacity 1
+                & strong,
+                svg
+                    color #e8e8e8
+                    fill #e8e8e8
+                    opacity .75
+                    font-size 12px
+
+            ul
+                li
+                    .nav-link
+                        &:hover
+                            background-color transparent !important
+                            opacity 1
+            .nav-item
+                padding 0
+
+            .nav-pills
+
+                .nav-link
+                    color: #e8e8e8 !important
+                    opacity .75
+                    fill #e8e8e8
+                    font-family gotham
+                    font-feature-settings: "tnum"
+                    font-size 14px
+                    font-weight 400

@@ -1,0 +1,34 @@
+#imageModal
+    .icon-image
+        font-size 60px
+        color #1F2937
+
+    form
+        .upload_dropZone
+            outline 3px dashed #1F2937
+            outline-offset 12px
+            transition outline-offset 0.2s ease-out, outline-color 0.3s ease-in-out, background-color 0.2s ease-out
+
+            &.highlight
+                outline: 3px dashed #f0bc74
+                outline-offset 5px
+
+            button
+                &:active
+                    background-color #f0bc74
+                    color #1F2937
+
+                &:focus
+                    box-shadow initial
+
+.prevAvatar
+    width 100%
+    border-radius 100%
+    overflow hidden
+    padding 3px
+    border 0
+    box-shadow 0 0 1px rgba(0,0,0,0.5)
+
+    img
+        width 100%
+        border-radius 100%

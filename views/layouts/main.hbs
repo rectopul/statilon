@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+    <meta name="author" content="Creative Tim">
+    <title>{{title}}</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/img/brand/fabiconvia.ico" data-head-react="true">
+
+    <!-- Bootstrap -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri&family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Figtree:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@300&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <meta name="author" content="Themesberg">
+    <meta name="description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+    <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, themesberg, themesberg dashboard, themesberg admin dashboard" />
+    <link rel="canonical" href="https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://demo.themesberg.com/volt-pro">
+    <meta property="og:title" content="Volt - Free Bootstrap 5 Dashboard">
+    <meta property="og:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+    <meta property="og:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://demo.themesberg.com/volt-pro">
+    <meta property="twitter:title" content="Volt - Free Bootstrap 5 Dashboard">
+    <meta property="twitter:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+    <meta property="twitter:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    {{!-- Font awesome --}}
+    <link type="text/css" href="/fontawesome/css/all.css" rel="stylesheet">
+
+    <!-- Sweet Alert -->
+    <link type="text/css" href="/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- Notyf -->
+    <link type="text/css" href="/vendor/notyf/notyf.min.css" rel="stylesheet">
+
+    <!-- Volt CSS -->
+    <link type="text/css" href="/css/volt.css" rel="stylesheet">
+    <!-- Argon CSS -->
+    <link rel="stylesheet" href="/css/app.css">
+
+    {{#ifCond page 'disp'}}
+        <link rel="stylesheet" href="/css/aguarde_css.css" type="text/css">
+        <link rel="stylesheet" href="/css/style2.css">
+        <link rel="stylesheet" href="/css/styne-stn.css">
+    {{/ifCond}}
+</head>
+
+<body class="{{pageClasses}} {{#contains pageType 'site'}}page{{/contains}}" data-token="{{token}}" data-client="{{client.id}}" id="{{pageId}}">
+    <script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.27.10'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+    {{{body}}}
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    
+    <!-- Core -->
+    <script src="/vendor/@popperjs/core/dist/umd/popper.min.js"></script>
+
+    <!-- Vendor JS -->
+    <script src="/vendor/onscreen/dist/on-screen.umd.min.js"></script>
+
+    <!-- Cleave -->
+    {{!-- public\assets\js\cleave\dist\cleave.min.js --}}
+    <script src="/assets/js/cleave/dist/cleave.min.js "></script>
+
+    <!-- Slider -->
+    {{!-- public\vendor\nouislider\dist\nouislider.min.js --}}
+    <script src="/vendor/nouislider/dist/nouislider.min.js"></script>
+
+    <!-- Smooth scroll -->
+    <script src="/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <!-- Datepicker -->
+    <script src="/vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+
+    <!-- Moment JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+
+    <!-- Vanilla JS Datepicker -->
+    <script src="/vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+
+    <!-- Notyf -->
+    <script src="/vendor/notyf/notyf.min.js"></script>
+
+    <!-- Simplebar -->
+    <script src="/vendor/simplebar/dist/simplebar.min.js"></script>
+
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- Volt JS -->
+    <script src="/assets/js/volt.js"></script>
+
+    <!-- Argon Scripts -->
+    <script>
+        //var socket = io();
+
+        var socket = io.connect(`/`, {
+            transports: ['websocket'],
+            secure: true,
+            'force new connection' : true,
+            'reconnect' : true,
+            reconnection: true,
+            reconnectionDelay: 1000,
+            reconnectionDelayMax : 5000,
+            reconnectionAttempts: 99999
+        })
+    </script>
+    <!-- Argon JS -->
+    {{#ifCond page 'dashboard'}}
+    <!-- Optional JS -->
+    {{/ifCond}}
+
+    <script src="/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    {{#if await}}
+    <script src="/assets/js/await.js"></script>
+    {{/if}}
+
+    {{#if panel}}
+    <script src="/js/panel.js"></script>
+    {{/if}}
+
+    {{#if operator}}
+    <script src="/js/operator.js"></script>
+    {{/if}}
+</body>
+</html>

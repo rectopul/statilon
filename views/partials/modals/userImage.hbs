@@ -1,0 +1,55 @@
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Selecione sua imagem</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form>
+            <div class="row">
+                <div class="col-4 offset-4">
+                    {{#each userImage}}
+                      <figure class="prevAvatar" data-avatar="true">
+                          <img src="/{{userImage}}" class="mx-auto d-block" alt="...">
+                      </figure>
+                    {{else}}
+                    <figure class="prevAvatar" data-avatar="none">
+                        <img src="/assets/img/team/profile-picture-2.jpg" class="mx-auto d-block" alt="default-avatar">
+                    </figure>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="row px-4">
+                <fieldset class="col-12 mt-5 upload_dropZone">
+                    <div class="row">
+                        <div class="col-12 icon-image text-center">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 text-center text-drop">
+                            Drag the image here
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 text-center my-3">
+                            <button type="button" class="btn btn-primary"><i class="fas fa-image"></i> Choose File</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </form>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary saveUserImage">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

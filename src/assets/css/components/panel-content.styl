@@ -1,0 +1,84 @@
+.panel-content
+    width calc(100% - var(--wallet-with))
+
+    @media screen and (min-width 992px)
+        padding 31px 30px
+
+    h1
+        font-size 36px
+        color var(--color-secondary)
+        font-weight 500
+        font-size 36px
+        padding-bottom 18px
+
+    form
+        width 640px
+        margin 0 auto
+        max-width 100%
+        color #2043b6
+        background #fff
+        border 1px solid #dee3e7
+        padding 28px
+        border-radius 8px
+        font-weight 400
+
+        header
+            text-align center
+            p
+                font-size 14px
+                margin-bottom 0
+
+        button
+            background #075ae9
+            width 100%
+            margin-top 20px
+            color #f2f2f2
+            text-align center
+            padding 0 20px
+            height 48px
+            display flex
+            justify-content: center
+            align-items center
+            font-weight 500
+            font-size inherit
+            border 0
+            outline 0
+            border-radius 15px
+
+        article
+            display flex
+            flex-direction column
+            label
+                font-size 14px
+                font-weight 400
+
+            .error
+                color #e44
+                background #ee44441a
+                border-radius 5px
+                padding 8px
+                margin-top 20px
+                font-size 12px
+                font-weight 400
+                display flex
+                align-items center
+                span
+                    margin-left 4px
+
+            input
+                border 1px solid #dee3e7
+                border-radius 8px
+                background #fff
+                padding 0 12px
+                height 45px
+                color currentcolor
+                outline 0
+
+                &:focus-visible
+                    outline none
+
+
+        svg
+            width 1em
+            height 1em
+            fill: currentcolor

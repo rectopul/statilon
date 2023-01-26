@@ -1,0 +1,98 @@
+body
+    &.bg-light
+        background #fafbff
+.popup-content
+    width 100%
+    max-width 100%
+    display grid
+    grid-template-areas "title"\
+                        "list"
+    grid-template-rows min-content auto
+
+    .list
+        grid-area list
+        list-style none
+        padding 0
+        margin 15px auto
+        width calc(100% - 30px)
+        color #2043b6
+        background-color #fff
+        border-radius 8px
+        border 1px solid #ecf0f8
+
+        li
+            &:not(:last-child)
+                border-bottom 1px solid #ecf0f8
+
+        button
+            width 100%
+            display flex
+            justify-content space-between
+            align-items center
+            border 0
+            background-color transparent
+            outline 0
+            color currentColor
+            padding 13px 20px
+
+            &:hover
+                background-color #f2f4fd
+
+            div
+                flex 1
+                text-align left
+                margin-left 8px
+                font-size 14px
+                font-weight 500
+            svg
+                width 20px
+                fill #2043b6
+
+    .title
+        grid-area title
+        padding 20px
+        text-align center
+        color currentColor
+        
+        p
+            margin 0
+            padding 0
+            font-size 16px
+            font-family gotham
+            font-weight 500
+            color #2043b6
+
+        img
+            width 105px
+            max-width 100%
+            margin 0
+            margin-bottom 20px
+
+.popup-header
+    display flex
+    justify-content space-between
+    align-items center
+    width 100%
+    background #0b122d
+    padding 10px
+
+    img
+        width 20px
+
+    svg
+        fill #439cf4
+        width 20px
+
+    figure
+        padding 10px
+
+    button
+        background-color transparent
+        border 0
+        outline 0
+        margin 0
+        padding 0
+        color #439cf4
+        display flex
+        justify-content center
+        padding 10px

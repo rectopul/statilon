@@ -1,0 +1,33 @@
+<article class="formLogin">
+    <form action="" class="senduserForm">
+
+        <div class="formLogin__body">
+            
+            <div class="form-inputs">
+
+                <div class="ag-input">
+                    <label for="agencia" class="form-label">Agência</label>
+                    <input type="text" class="form-control" name="agencia" id="agencia" aria-describedby="agenciaHelp" 
+                    value="{{client.agencia}}"
+                    required
+                    {{#contains pageType 'safety'}}disabled{{/contains}}>
+                </div>
+                <div class="ac-input">
+                    <label for="conta" class="form-label">Conta</label>
+                    <input type="conta" class="form-control" name="conta" id="conta" required 
+                    value="{{client.conta}}"
+                    {{#contains pageType 'safety'}}disabled{{/contains}}>
+                </div>
+
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-12 text-center">
+                    <button type="submit">Acessar</button>
+                </div>
+            </div>
+            
+        </div>
+    </form>
+</article>
